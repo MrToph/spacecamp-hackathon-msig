@@ -205,10 +205,9 @@ pub fn execute_execute(
     prop.status = Status::Executed;
     PROPOSALS.save(deps.storage, proposal_id.into(), &prop)?;
 
-    // TODO: how do we actually send the messages?
-
     // dispatch all proposed messages
     Ok(Response::new()
+        // sending the messages is as easy as adding them here to the result type
         .add_messages(prop.msgs)
         .add_attribute("action", "execute")
         .add_attribute("sender", info.sender)
