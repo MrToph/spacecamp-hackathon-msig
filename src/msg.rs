@@ -33,7 +33,7 @@ where
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct InstantiateMsg {
     pub voters: Vec<Voter>,
-    pub required_weight: u64,
+    pub threshold_weight: u64,
     pub max_voting_period: Duration,
 }
 

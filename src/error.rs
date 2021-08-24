@@ -15,6 +15,9 @@ pub enum ContractError {
     #[error("No voters")]
     NoVoters {},
 
+    #[error("Voter weight of zero")]
+    VoterZeroWeight {},
+
     #[error("Unauthorized")]
     Unauthorized {},
 
